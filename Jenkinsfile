@@ -27,7 +27,7 @@ pipeline {
                       -v "$PWD:/tf" \
                       -w /tf \
                       bridgecrew/checkov:latest \
-                      checkov -d . --framework terraform,kubernetes,dockerfile
+                     -d . --framework terraform,kubernetes,dockerfile
                 '''
             }
         }
