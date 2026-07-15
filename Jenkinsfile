@@ -42,7 +42,7 @@ pipeline {
             steps {
                 sh '''
                     docker rm -f hello-test || true
-                    docker run -d --name hello-test -p 8090:80 $IMAGE_NAME
+                    docker run -d --name hello-test -p 8090:8080 $IMAGE_NAME
                     sleep 5
                     curl -f http://localhost:8090
                     docker rm -f hello-test || true
@@ -78,7 +78,7 @@ pipeline {
                 sh '''
                     docker pull $IMAGE_NAME
                     docker rm -f hello-app || true
-                    docker run -d --name hello-app -p 8085:80 $IMAGE_NAME
+                    docker run -d --name hello-app -p 8085:8080 $IMAGE_NAME
                 '''
             }
         }
