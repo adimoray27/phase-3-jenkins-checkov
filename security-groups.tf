@@ -1,5 +1,5 @@
 resource "aws_security_group_rule" "all_worker_mgmt_egress_https" {
-  description       = "Allow HTTPS outbound traffic"
+  
   type              = "egress"
   security_group_id = aws_security_group.all_worker_mgmt.id
 
