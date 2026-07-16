@@ -1,6 +1,6 @@
 module "eks" {
 
-  #checkov:skip=CKV_TF_1:Terraform Registry module is pinned to version 20.8.4
+  
   source          = "terraform-aws-modules/eks/aws"
   version         = "20.8.4"
 
